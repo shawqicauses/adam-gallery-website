@@ -1,6 +1,7 @@
 import { createClient } from "contentful"
-import { Fragment } from "react"
+import { Fragment, useEffect } from "react"
 import { Header, Navbar } from "../components/components"
+import { useContent } from "../context"
 
 export async function getStaticProps() {
   const client = createClient({
@@ -25,7 +26,20 @@ export async function getStaticProps() {
 }
 
 function Home({ about, products, advisements, social }) {
-  console.log(about, products, advisements, social)
+  const { content, setContent } = useContent()
+  useEffect(
+    () =>
+      setContent(previous => ({
+        ...previous,
+        about,
+        products,
+        advisements,
+        social
+      })),
+
+    [setContent, about, products, advisements, social]
+  )
+
   return (
     <Fragment>
       <Navbar />
