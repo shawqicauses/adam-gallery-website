@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  .button {
+    @apply flex cursor-pointer items-center justify-center gap-3
+    border-2 border-transparent bg-transparent py-5 px-8
+    text-base font-medium leading-none outline-none transition-all
+    hover:-translate-y-1 focus:translate-y-0.5 md:text-lg;
+  }
+
+  .button-primary {
+    @apply rounded-lg border-neutral-900 bg-neutral-900 text-white
+    ring-2 ring-transparent ring-offset-2 ring-offset-transparent
+    hover:bg-transparent hover:text-neutral-900
+    focus:!bg-neutral-900 focus:!text-white
+    focus:!ring-neutral-900 focus:!ring-offset-white;
+  }
+
+  .button-secondary {
+    @apply rounded-lg border-neutral-900 bg-transparent text-neutral-900
+    ring-2 ring-transparent ring-offset-2 ring-offset-transparent
+    hover:bg-neutral-900 hover:text-white
+    focus:!bg-neutral-900 focus:!text-white
+    focus:!ring-neutral-900 focus:!ring-offset-white;
+  }
+
+  .button-tertiary {
+    @apply border-transparent bg-transparent text-neutral-900
+    underline decoration-yellow-500 decoration-2 underline-offset-2;
+  }
+
+  .button-white {
+    @apply rounded-lg border-white bg-white text-neutral-900
+    ring-2 ring-transparent ring-offset-2 ring-offset-transparent
+    hover:bg-transparent hover:text-white
+    focus:bg-white focus:text-neutral-900
+    focus:ring-white focus:ring-offset-neutral-900;
+  }
+}
