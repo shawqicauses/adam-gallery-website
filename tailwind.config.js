@@ -6,26 +6,11 @@ module.exports = {
   ],
   theme: {
     screens: {
-      "xs": "480px",
       "sm": "640px",
       "md": "768px",
       "lg": "1024px",
       "xl": "1280px",
       "xl-2": "1536px"
-    },
-    columns: {
-      1: "1",
-      2: "2",
-      3: "3",
-      4: "4",
-      5: "5",
-      6: "6",
-      7: "7",
-      8: "8",
-      9: "9",
-      10: "10",
-      11: "11",
-      12: "12"
     },
     maxWidth: {
       "0": "0rem",
@@ -59,11 +44,7 @@ module.exports = {
       "xl-3": "2rem",
       "xl-4": "2.25rem",
       "xl-5": "3rem",
-      "xl-6": "3.75rem",
-      "xl-7": "4.5rem",
-      "xl-8": "6rem",
-      "xl-9": "6.75rem",
-      "xl-10": "7.5rem"
+      "xl-6": "3.75rem"
     },
     fontWeight: {
       "thin": 100,
@@ -87,12 +68,6 @@ module.exports = {
       "xl-3": "1.5rem",
       "full": "100rem"
     },
-    boxShadow: {
-      sm: "0 4px 8px 0 rgb(0 0 0 / 0.05)",
-      base: "0 4px 12px 0 rgb(0 0 0 / 0.05), 0 4px 8px -4px rgb(0 0 0 / 0.05)",
-      md: "0 16px 24px -4px rgb(0 0 0 / 0.05), 0 8px 16px -8px rgb(0 0 0 / 0.05)",
-      lg: "0 40px 60px -12px rgb(0 0 0 / 0.05), 0 12px 24px -16px rgb(0 0 0 / 0.05);"
-    },
     blur: {
       "none": "0",
       "sm": "4px",
@@ -103,6 +78,8 @@ module.exports = {
       "xl-2": "40px",
       "xl-3": "64px"
     },
+    columns: {},
+    boxShadow: {},
     dropShadow: {}
   },
   plugins: []
