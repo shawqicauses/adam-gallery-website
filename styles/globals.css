@@ -3,6 +3,19 @@
 @tailwind utilities;
 @tailwind variants;
 
+@layer base {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Fire-Fox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Fire-Fox */
+  }
+}
+
 @layer components {
   .button {
     @apply flex cursor-pointer items-center justify-center gap-3
