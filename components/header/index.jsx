@@ -1,4 +1,5 @@
-import { ArchiveIcon, ExternalLinkIcon } from "@heroicons/react/outline"
+import { ExternalLinkIcon } from "@heroicons/react/outline"
+import { ArchiveIcon } from "@heroicons/react/solid"
 import { classes } from "../../lib/utils"
 
 function Header() {
@@ -16,9 +17,9 @@ function Header() {
     <header
       id="home"
       className={classes(
-        "relative h-full min-h-screen w-full",
+        "relative h-screen min-h-[45rem] w-full",
         "flex items-center justify-center",
-        "overflow-hidden py-24 sm:py-32 md:py-40"
+        "overflow-hidden bg-transparent"
       )}>
       <div
         className={classes(
@@ -131,13 +132,13 @@ function Header() {
       </div>
       <div
         className={classes(
-          "absolute h-screen w-screen",
+          "absolute h-full min-h-[45rem] w-full",
           "top-0 left-0 bottom-auto right-auto -z-50",
           "overflow-hidden bg-white transition-all"
         )}>
         <div
           className={classes(
-            "absolute flex flex-row",
+            "absolute flex h-full w-full flex-row",
             "top-0 left-0 bottom-auto right-auto -z-50",
             "items-center justify-center gap-8"
           )}>
@@ -145,14 +146,14 @@ function Header() {
             <div
               key={index}
               className={classes(
-                "relative h-screen w-0.5 overflow-hidden",
+                "relative h-full w-0.5 overflow-hidden",
                 "border border-transparent bg-neutral-50"
               )}></div>
           ))}
         </div>
         <div
           className={classes(
-            "absolute flex flex-col",
+            "absolute flex h-full w-full flex-col",
             "top-0 left-0 bottom-auto right-auto -z-50",
             "items-center justify-center gap-8"
           )}>
@@ -160,7 +161,7 @@ function Header() {
             <div
               key={index}
               className={classes(
-                "relative h-0.5 w-screen overflow-hidden",
+                "relative h-0.5 w-full overflow-hidden",
                 "border border-transparent bg-neutral-50"
               )}></div>
           ))}
