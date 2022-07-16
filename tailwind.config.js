@@ -78,8 +78,13 @@ module.exports = {
       "xl-2": "40px",
       "xl-3": "64px"
     },
+    boxShadow: {
+      sm: "0 4px 8px 0 rgb(0 0 0 / 0.05)",
+      base: "0 4px 12px 0 rgb(0 0 0 / 0.05), 0 4px 8px -4px rgb(0 0 0 / 0.05)",
+      md: "0 16px 24px -4px rgb(0 0 0 / 0.05), 0 8px 16px -8px rgb(0 0 0 / 0.05)",
+      lg: "0 40px 60px -12px rgb(0 0 0 / 0.05), 0 12px 24px -16px rgb(0 0 0 / 0.05);"
+    },
     columns: {},
-    boxShadow: {},
     dropShadow: {}
   },
   plugins: []

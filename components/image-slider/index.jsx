@@ -15,7 +15,7 @@ function ImageSlider() {
         )}>
         {content.products &&
           content.products.map(item => (
-            <div key={item.sys.id} className={classes("snap-start")}>
+            <div key={item.sys.id} className={classes("relative snap-start")}>
               <div
                 className={classes(
                   "relative aspect-square w-[19.0625rem]",
@@ -28,6 +28,14 @@ function ImageSlider() {
                   objectFit="cover"
                 />
               </div>
+              <span
+                className={classes(
+                  "absolute right-5 bottom-5 inline-block shadow-lg",
+                  "rounded-lg bg-white py-3 px-3 text-base font-medium",
+                  "leading-none -tracking-wide text-zinc-900"
+                )}>
+                {item.fields.price} ILS
+              </span>
             </div>
           ))}
       </div>
