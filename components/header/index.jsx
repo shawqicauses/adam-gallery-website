@@ -62,8 +62,7 @@ function Header() {
           className={classes(
             "flex h-auto w-full flex-col",
             "items-stretch justify-center gap-3",
-            "sm:w-max sm:flex-row sm:gap-10",
-            "sm:gap-4 lg:gap-5"
+            "sm:w-max sm:flex-row md:gap-4 xl:gap-5"
           )}>
           <a href="#products" className={classes("button button-primary")}>
             <ArchiveIcon

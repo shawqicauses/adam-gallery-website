@@ -19,7 +19,7 @@ class MyDocument extends Document {
         <body
           className={classes(
             "overflow-y-auto overflow-x-hidden",
-            "bg-neutral-50 font-poppins"
+            "bg-white font-poppins"
           )}>
           <Main />
           <NextScript />

@@ -6,10 +6,10 @@ function ImageSlider() {
   const { content } = useContent()
 
   return (
-    <section className={classes("-mt-10 mb-10 px-5 sm:-mt-20 sm:mb-20")}>
+    <section className={classes("-mt-8 mb-8 px-5 md:-mt-14 md:mb-14")}>
       <div
         className={classes(
-          "container mx-auto px-5 xl-2:max-w-xl-7",
+          "container mx-auto xl-2:max-w-xl-7",
           "flex flex-row items-center justify-start gap-5",
           "no-scrollbar h-full snap-x overflow-x-auto"
         )}>
@@ -18,7 +18,7 @@ function ImageSlider() {
             <div key={item.sys.id} className={classes("snap-start")}>
               <div
                 className={classes(
-                  "relative aspect-square w-[18.75rem]",
+                  "relative aspect-square w-[19.0625rem]",
                   "overflow-hidden rounded-lg"
                 )}>
                 <Image
