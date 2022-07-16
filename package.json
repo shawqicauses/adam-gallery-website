@@ -9,11 +9,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "dependencies": {
     "@heroicons/react": "1.0.6",
     "contentful": "9.1.32",
