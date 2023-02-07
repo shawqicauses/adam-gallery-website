@@ -3,13 +3,13 @@ import {ArchiveIcon} from "@heroicons/react/solid"
 
 export default function Header() {
   const colors = [
-    {color: "bg-yellow-300"},
-    {color: "bg-amber-300"},
-    {color: "bg-orange-300"},
-    {color: "bg-red-300"},
-    {color: "bg-indigo-300"},
-    {color: "bg-purple-300"},
-    {color: "bg-pink-300"}
+    {index: 0, color: "bg-yellow-300"},
+    {index: 1, color: "bg-amber-300"},
+    {index: 2, color: "bg-orange-300"},
+    {index: 3, color: "bg-red-300"},
+    {index: 4, color: "bg-indigo-300"},
+    {index: 5, color: "bg-purple-300"},
+    {index: 6, color: "bg-pink-300"}
   ]
 
   return (
@@ -50,9 +50,9 @@ export default function Header() {
       </div>
       <div className="absolute top-1/2 left-1/2 bottom-auto right-auto -z-10 flex h-full w-full -translate-x-1/2 -translate-y-1/2 -rotate-12 transform flex-row items-center justify-center gap-96 transition-all">
         <div className="relative flex h-full w-full transform items-center justify-center gap-5 transition-all">
-          {colors.map((color, index) => (
+          {colors.map((color) => (
             <div
-              key={index}
+              key={color.index}
               className={[
                 "relative h-96 w-10 rounded-full mix-blend-soft-light blur-xl-3",
                 color.color
@@ -61,9 +61,9 @@ export default function Header() {
           ))}
         </div>
         <div className="relative flex h-full w-full transform items-center justify-center gap-5 transition-all">
-          {colors.map((color, index) => (
+          {colors.map((color) => (
             <div
-              key={index}
+              key={color.index}
               className={[
                 "relative h-96 w-10 rounded-full mix-blend-soft-light blur-xl-3",
                 color.color
@@ -76,6 +76,7 @@ export default function Header() {
         <div className="absolute top-0 left-0 bottom-auto right-auto -z-50 flex h-full w-full flex-row items-center justify-center gap-8">
           {[...new Array(80)].map((item, index) => (
             <div
+              // eslint-disable-next-line
               key={index}
               className="relative h-full w-0.5 overflow-hidden border border-transparent bg-neutral-50"
             />
@@ -84,6 +85,7 @@ export default function Header() {
         <div className="absolute top-0 left-0 bottom-auto right-auto -z-50 flex h-full w-full flex-col items-center justify-center gap-8">
           {[...new Array(80)].map((item, index) => (
             <div
+              // eslint-disable-next-line
               key={index}
               className="relative h-0.5 w-full overflow-hidden border border-transparent bg-neutral-50"
             />

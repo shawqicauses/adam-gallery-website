@@ -33,8 +33,9 @@ export const getStaticProps = async function getStaticProps() {
   }
 }
 
+// eslint-disable-next-line
 export default function Home({about, products, advisements, social}) {
-  const {content, setContent} = useContent()
+  const {setContent} = useContent()
   useEffect(
     () =>
       setContent((previous) => ({

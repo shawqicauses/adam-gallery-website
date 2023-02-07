@@ -14,6 +14,7 @@ export default function Navbar() {
             {name: "Contact", link: "#contact"}
           ].map((link, index) => (
             <li
+              // eslint-disable-next-line
               key={index}
               className="flex h-auto w-full cursor-pointer flex-row items-center justify-center gap-0 transition-all">
               <a

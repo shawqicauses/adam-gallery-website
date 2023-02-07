@@ -1,2 +1,3 @@
-export const classes = (...classes) => classes.filter(Boolean).join(" ")
-export const url = url => (!/^(https?:)?\/\//.test(url) ? url : "https:" + url)
+export const classes = (...args) => args.filter(Boolean).join(" ")
+export const url = (param) =>
+  !/^(https?:)?\/\//.test(param) ? param : `https:${param}`
