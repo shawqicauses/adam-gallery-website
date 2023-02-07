@@ -1,5 +1,4 @@
-import Document, { Head, Html, Main, NextScript } from "next/document"
-import { classes } from "../lib/utils"
+import Document, {Head, Html, Main, NextScript} from "next/document"
 
 const font = [
   "https://fonts.googleapis.com/css",
@@ -12,15 +11,11 @@ const font = [
 class MyDocument extends Document {
   render() {
     return (
-      <Html className={classes("scroll-smooth")}>
+      <Html className="scroll-smooth">
         <Head>
           <link href={font} rel="stylesheet" />
         </Head>
-        <body
-          className={classes(
-            "overflow-y-auto overflow-x-hidden",
-            "bg-white font-poppins"
-          )}>
+        <body className="overflow-y-auto overflow-x-hidden bg-white font-poppins">
           <Main />
           <NextScript />
         </body>

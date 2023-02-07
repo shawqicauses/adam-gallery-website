@@ -1,18 +1,26 @@
-import { createClient } from "contentful"
-import { Fragment, useEffect } from "react"
-import { About, Header, ImageSlider, Navbar } from "../components/components"
-import { useContent } from "../context"
+import {createClient} from "contentful"
+import {Fragment, useEffect} from "react"
+import {
+  About,
+  Advisements,
+  Footer,
+  Header,
+  ImageSlider,
+  Navbar,
+  Products
+} from "../components/components"
+import {useContent} from "../context"
 
-export async function getStaticProps() {
+export const getStaticProps = async function getStaticProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID || "",
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || ""
   })
 
-  const about = await client.getEntries({ content_type: "about" })
-  const products = await client.getEntries({ content_type: "product" })
-  const advisements = await client.getEntries({ content_type: "advisements" })
-  const social = await client.getEntries({ content_type: "social" })
+  const about = await client.getEntries({content_type: "about"})
+  const products = await client.getEntries({content_type: "product"})
+  const advisements = await client.getEntries({content_type: "advisements"})
+  const social = await client.getEntries({content_type: "social"})
 
   return {
     props: {
@@ -25,11 +33,11 @@ export async function getStaticProps() {
   }
 }
 
-function Home({ about, products, advisements, social }) {
-  const { content, setContent } = useContent()
+export default function Home({about, products, advisements, social}) {
+  const {content, setContent} = useContent()
   useEffect(
     () =>
-      setContent(previous => ({
+      setContent((previous) => ({
         ...previous,
         about,
         products,
@@ -46,8 +54,9 @@ function Home({ about, products, advisements, social }) {
       <Header />
       <ImageSlider />
       <About />
+      <Advisements />
+      <Products />
+      <Footer />
     </Fragment>
   )
 }
-
-export default Home
